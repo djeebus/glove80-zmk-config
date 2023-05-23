@@ -23,7 +23,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define HYPER  LS(LC)
+#define HYPER  LS(LEFT_CONTROL)
 
 / {
     /* Glove80 system behavior & macros */
