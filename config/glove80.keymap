@@ -38,6 +38,16 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
+
+
+        combicaps: combicaps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COMBICAPS";
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "hold-preferred";
+            bindings = <&ctrlshft>, <&kp>;
+        };
     };
 
     macros {
@@ -96,24 +106,6 @@
         };
     };
 
-    magic: magic_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "MAGIC_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&rgb_ug_status_macro>;
-    };
-
-    combicaps: combicaps {
-        compatible = "zmk,behavior-hold-tap";
-        label = "COMBICAPS";
-        #binding-cells = <2>;
-        tapping-term-ms = <100>;
-        flavor = "hold-preferred";
-        bindings = <&ctrlshft>, <&kp>;
-    };
-
     /* Automatically generated keymap */
     keymap {
         compatible = "zmk,keymap";
@@ -146,7 +138,7 @@
        &none            &none            &none            &none            &none            &none                                                         &none      &none      &none       &none         &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none  &kp KP_N7  &kp KP_N8   &kp KP_N9         &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none  &kp KP_N4  &kp KP_N5   &kp KP_N6         &none     &bootloader
-      &reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none  &kp KP_N1  &kp KP_N2   &kp KP_N3         &none          &reset
+      &sys_reset        &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none  &kp KP_N1  &kp KP_N2   &kp KP_N3         &none      &sys_reset
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none          &kp KP_N0      &none  &kp KP_DOT  &kp KP_EQUAL           &none
             >;
         };
