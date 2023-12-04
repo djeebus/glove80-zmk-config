@@ -17,7 +17,6 @@
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
-#define FACTORY_TEST 3
 
 / {
     behaviors {
@@ -111,7 +110,6 @@
         label = "COMBICAPS";
         #binding-cells = <2>;
         tapping-term-ms = <100>;
-        quick-tap-ms = <-1>;
         flavor = "hold-preferred";
         bindings = <&ctrlshft>, <&kp>;
     };
