@@ -85,19 +85,7 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
-    };
 
-    magic: magic_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "MAGIC_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&rgb_ug_status_macro>;
-    };
-
-    /* Custom Defined Behaviors */
-    macros {
         ctrlshft: ctrlshft {
             label = "CTRLSHFT_MACRO";
             compatible = "zmk,behavior-macro";
@@ -107,6 +95,15 @@
               , <&macro_pause_for_release>
               , <&macro_release &kp LSHFT &kp LCTRL>;
         };
+    };
+
+    magic: magic_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MAGIC_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&mo>, <&rgb_ug_status_macro>;
     };
 
     combicaps: combicaps {
