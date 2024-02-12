@@ -142,6 +142,5 @@
        &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none          &kp KP_N0      &none  &kp KP_DOT  &kp KP_EQUAL           &none
             >;
         };
-
     };
 };
